@@ -41,7 +41,7 @@ public class HomeController : Controller
 
     public IActionResult MovieList()
     {
-        var movies = _repo.GetAllMovies();
+        var movies = _repo.GetAllMovies().ToList();;
         return View(movies);
     }
 
